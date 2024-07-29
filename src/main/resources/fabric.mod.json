@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "metromod",
+  "version": "${version}",
+  "name": "MetroMod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/metromod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.metrochel.metromod.client.MetromodClient"
+    ],
+    "main": [
+      "net.metrochel.metromod.Metromod"
+    ]
+  },
+  "mixins": [
+    "metromod.mixins.json",
+    {
+      "config": "metromod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
